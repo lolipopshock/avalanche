@@ -1,0 +1,1 @@
+# Avalanche Blog Template for Jekyll 
