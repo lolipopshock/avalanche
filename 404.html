@@ -1,0 +1,54 @@
+---
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="site-title title">Page Not Found</h1>
+        <div class="is-divider" style="margin-top: 0.5rem; margin-bottom: 0.5rem;"></div>
+        <nav class="navbar" role="navigation">
+          <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                  <i style="font-family: 'Cormorant Garamond, sans-serif;"> Maybe try the these links?</i>
+              </a>
+      
+              <div class="navbar-burger" data-target="navbar-main"
+                  onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+      
+          <div class="navbar-menu" id="navbar-main">
+              <div class="navbar-end">
+                  <!-- navbar items -->
+                  <a href="/" class="navbar-item">Home</a>
+                  {% for item in site.data.settings.menu %}
+                  <a href="/{{ item.file }}" class="navbar-item">{{ item.name }}</a>
+                  {% endfor %}
+                  <div class="navbar-item">
+                      {% for item in site.data.settings.social %}
+                      <a href="{{ item.link }}" class="button is-white">
+                          <i class="{{ item.icon }} fa-w-14 fa-lg" aria-hidden="true"></i>
+                      </a>
+                      {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </nav>
+      </div>
+    </div>
+    <div class="hero-foot">
+      {% include footer.html %}
+    </div>    
+  </section>
+</body>
+</html>

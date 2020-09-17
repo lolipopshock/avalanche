@@ -1,0 +1,10 @@
+{% if site.data.settings.utterances-repo %}
+<div class="is-divider" style="margin-top: 1.5rem; margin-bottom: 0.5rem;"></div>
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.data.settings.utterances-repo }}"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+{% endif %}

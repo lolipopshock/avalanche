@@ -1,0 +1,35 @@
+# If you are not using Google Analytics, please change 'google-ID' to an empty string
+# google-ID: x
+# disqus-ID: x
+# utterances-repo: x
+
+menu:
+- {name: 'About', file: ''}
+- {name: 'Research', file: 'research.html'}
+- {name: 'Blog', file: 'blog.html'}
+
+social:
+- {name: 'mail', icon: 'fas fa-at', link: 'mailto:your@gmail.com',
+   display-link: 'your@gmail.com', display-icon: "fas fa-envelope-square"}
+- {name: 'github', icon: 'fab fa-github', link: 'https://github.com/youraccount', 
+   display-link: 'youraccount', display-icon: "fab fa-github-square"}
+- {name: 'twitter', icon: 'fab fa-twitter-square', link: 'https://twitter.com/youraccount', 
+   display-link: '@youraccount', display-icon: "fab fa-twitter-square"}
+
+publication: 
+    types:
+      - 'all'
+      - 'workshop'
+      - 'conference'
+    topics:
+      - {name: 'All',            id: 'all',  description: ''}
+      - {name: 'Deep Learning',  id: 'dl',   description: ''}
+      - {name: 'GAN',            id: 'gan',  description: ''}
+      - {name: 'Other',          id: 'misc', description: ''}
+    default_img: "/assets/publications/placeholder.png"
+    tag_list: 
+      - {name: "paper",  icon: "far fa-file-pdf"}
+      - {name: "website",icon: "fas fa-globe-americas"}
+      - {name: "arxiv",  icon: "ai ai-arxiv"}  
+      - {name: "poster", icon: "far fa-file-image"}
+      - {name: "video",  icon: "fab fa-youtube"}

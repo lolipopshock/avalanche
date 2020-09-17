@@ -1,0 +1,52 @@
+---
+layout: page
+pagination:
+  enabled: true
+title: Blog
+---
+
+<nav class="pagination  is-small" role="navigation" aria-label="pagination" style="margin-top: -2.80rem">
+    <a class="pagination-previous" {% if paginator.previous_page != nil %}href="{{ paginator.previous_page_path }}"{% else %}disabled{% endif %}>Previous</a>
+    <a class="pagination-next" {% if paginator.next_page != nil %}href="{{ paginator.next_page_path }}"{% else %}disabled{% endif %}>Next page</a>
+
+    <ul class="pagination-list">
+    {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+        <li>    
+                {% if page.url == trail.path %}
+                <a class="pagination-link is-current" aria-label="Page {{ trail.title }}" aria-current="page" href="{{ trail.path | prepend: site.baseurl }}">{{ trail.num }}</a>
+                {% else %}
+                <a class="pagination-link" aria-label="Goto page {{ trail.title }}" href="{{ trail.path | prepend: site.baseurl }}"> {{ trail.num }}</a>
+                {% endif %}
+        </li>
+        {% endfor %}
+    {% else %}
+    <li><a class="pagination-link" aria-label="Page 1" aria-current="page" disabled>1</a></li>
+    
+    {% endif %}
+    </ul>
+</nav>
+<div class="is-divider" style="margin-top: 0.45rem; margin-bottom: 1.5rem;"></div>
+
+{% for post in paginator.posts %}
+<div class="columns">
+    <div class="column is-9">
+        <div class="content">
+
+            <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+                <h3 class="article-list-title">{{ post.title }}</h3>
+            </a>
+            <div class="article-list-description">
+                <p>
+                    {{ post.description }}
+                </p>
+            </div>
+            {% include article/info-footer.html post=post %}
+        </div>
+    </div>
+</div>
+{% if forloop.last != true %}
+<div class="is-divider" style="margin-top: 0.5rem; margin-bottom: 1.5rem;"></div>
+{% endif %}
+{% endfor %}
+

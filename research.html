@@ -1,0 +1,104 @@
+---
+layout: page
+title: Publication
+---
+
+<!-- Used for switching between tabs -->
+<style>
+    .tab-pane {
+        display: none
+    }
+    .tab-content .is-active {
+        display: initial
+    }
+</style>
+
+<script>
+    window.onload = () => {
+
+        // Tabs Start
+        document.querySelectorAll('.tabs').forEach((tab) => {
+            tab.querySelectorAll('li').forEach((li) => {
+                li.onclick = () => {
+                    tab.querySelector('li.is-active').classList.remove('is-active')
+                    li.classList.add('is-active')
+                    tab.nextElementSibling.querySelector('.tab-pane.is-active').classList.remove('is-active')
+                    tab.nextElementSibling.querySelector('.tab-pane#' + li.firstElementChild.getAttribute('id'))
+                        .classList.add("is-active")
+                }
+            })
+        })
+
+    }
+</script>
+
+<!-- The tab -->
+<div class="tabs" style="margin-top: -3rem">
+    <ul style="margin: 0rem;">
+        {% for topic in site.data.settings.publication.topics %}
+        <li {% if topic.id == site.data.settings.publication.topics.first.id %}class="is-active" {% endif %}>
+            <a id="{{ topic.id }}">
+                <span>{{ topic.name }}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<!-- The tab content -->
+<div class="tab-content">
+    {% for topic in site.data.settings.publication.topics %}
+    <div class="tab-pane {% if topic == site.data.settings.publication.topics.first %}is-active{% endif %}"
+        id="{{ topic.id }}">
+        {% if topic.id == 'all' %}
+            {% assign current_pubs = site.data.publications %}
+        {% else %}
+            {% assign current_pubs = site.data.publications | where: "topic", topic.id %}
+        {% endif %}
+        
+        <!-- <p class="publication-misc">{{ topic.description }}</p> -->
+        
+        {% for pub in current_pubs %}
+        
+        {% if pub.img == nil %}
+        {% assign img_url = site.data.settings.publication.default_img %}
+        {% else %}
+        {% assign img_url = pub.img %}
+        {% endif %}
+        <div class="columns">
+            <div class="column is-4">
+                <figure class="image is-16by9"><img src="{{ img_url }}"></figure>
+            </div>
+            <div class="column is-8">
+                <div class="content">
+                    <h3 class="publication-title">{{ pub.title }}</h3>
+                    <p class="publication-name">{{ pub.author | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                    <p class="publication-misc">
+                        {{ pub.venue | markdownify | remove: '<p>' | remove: '</p>' }} {% if pub.venue != nil%}.{% endif %} 
+                        {{ pub.publisher | markdownify | remove: '<p>' | remove: '</p>' }} {% if pub.publisher != nil%}.{% endif %} 
+                    </p>
+                    
+                    <div class="field is-grouped is-grouped-multiline">
+                        {% for tag in site.data.settings.publication.tag_list %}
+                        {% if pub[tag.name] != nil %}
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <span class="tag"><i class="{{ tag.icon}}"></i></span>
+                                <a class="tag" href="{{pub[tag.name]}}">{{ tag.name | capitalize }}</a>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if forloop.last != true %}
+        <div class="is-divider" style="margin-top: 0.5rem; margin-bottom: 1.5rem;"></div>
+        {% endif %}
+        
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>

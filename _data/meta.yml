@@ -1,0 +1,8 @@
+index:
+  welcome_message: >
+    Hi! Welcome to The Homepage.
+  personal_photo: "/assets/publications/placeholder.png"
+  news_highlight_color: 'is-info'
+  personal_description: >
+    THis is a great website.
+footnote: Created &amp; maintained by [Zejiang Shen](https://www.szj.io), with [jekyll](https://jekyllrb.com/) and [bulma](http://bulma.io/). The website content is licensed [CC BY NC SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/).
