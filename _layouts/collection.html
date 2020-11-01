@@ -2,32 +2,4 @@
 layout: default
 ---
 
-<div class="columns">
-    <div class="column is-3">
-        <h3 class="subtitle"><i>Posts with {{ page.type }}</i></h3>
-
-        <h1 class="title" style='font-family: "Cormorant Garamond", sans-serif;'>
-            <a href="{{ page.url }}" class="has-text-black">
-                {{ page.title }}
-            </a>
-        </h1>
-    </div>
-
-    <div class="column is-9">
-        {% for post in page.posts %}
-            <div class="content">
-                <span>
-                <a href="{{ post.url | relative_url }}" title="{{ post.title }}" >
-                    <span class="article-list-title">{{ post.title }}</span>
-                </a>
-                /
-                <span class="article-list-date">
-                    {{ post.date | date: "%B %-d, %Y" }}
-                </span>
-            </span>
-            </div>
-            
-            <div class="is-divider" style="margin-top: -0.6rem; margin-bottom: 1rem;"></div>
-        {% endfor %}
-    </div>
-</div>
+{% include blog-list.html posts=page.posts type=page.type title=page.title %}

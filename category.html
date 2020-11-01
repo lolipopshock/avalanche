@@ -1,0 +1,14 @@
+---
+layout: page
+pagination:
+title: Blog Categories
+---
+
+<ul>
+    {% for category in site.categories %}
+        {% assign type = "category" %}
+        {% assign title = category | first %}
+        {% assign posts = category | last %}
+        {% include blog-list.html posts=posts type=type title=title %}
+    {% endfor %}
+</ul>

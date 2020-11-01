@@ -1,0 +1,31 @@
+
+<div class="columns">
+    <div class="column is-3">
+        <h3 class="subtitle"><i>Posts with {{ include.type }}</i></h3>
+
+        <h1 class="title" 
+            style='font-family: "Cormorant Garamond", sans-serif;padding-bottom: 2rem'>
+            <a href="/{{ include.type | downcase }}/{{ include.title | downcase }}" class="has-text-black">
+                {{ include.title }}
+            </a>
+        </h1>
+    </div>
+
+    <div class="column is-9">
+        {% for post in include.posts %}
+            <div class="content">
+                <span>
+                <a href="{{ post.url | relative_url }}" title="{{ post.title }}" >
+                    <span class="article-list-title">{{ post.title }}</span>
+                </a>
+                /
+                <span class="article-list-date">
+                    {{ post.date | date: "%B %-d, %Y" }}
+                </span>
+            </span>
+            </div>
+            
+            <div class="is-divider" style="margin-top: -0.6rem; margin-bottom: 1rem;"></div>
+        {% endfor %}
+    </div>
+</div>
