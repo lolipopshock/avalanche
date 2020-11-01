@@ -11,14 +11,33 @@
         {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
         {% endunless %}
     </span>
+    </span>
+    {% if include.post.categories.size >= 1 %}
     <span class="article-list-divider">-</span>
+    <span class="article-list-cat">Category:</span>
+    {% endif %}
+    <span class="field">
+        {% for cat in include.post.categories %}
+        <a href="/category/{{ cat | downcase }}" class="article-list-item">
+            {{ cat | capitalize | remove: '<p>' | remove: '</p>' }}
+        </a>
+        {% if forloop.last != true %}
+        ,
+        {% endif %}
+        {% endfor %}
+    </span>
+    {% if include.post.tags.size >= 1 %}
+    <span class="article-list-divider">-</span>
+    <span class="article-list-cat">Tags:</span>
+    {% endif %}
     <span class="field">
         {% for tag in include.post.tags %}
-            <a class="has-text-grey-dark is-italic is-family-sans-serif	">{{ tag | capitalize | remove: '<p>' | remove: '</p>' }}</a>
-            {% if forloop.last != true %}
-            ,
-            {% endif %}
+        <a href="/tag/{{ tag | downcase }}" class="article-list-item">
+            {{ tag | capitalize | remove: '<p>' | remove: '</p>' }}
+        </a>
+        {% if forloop.last != true %}
+        ,
+        {% endif %}
         {% endfor %}
     </span>
 </div>
-

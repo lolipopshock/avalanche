@@ -24,6 +24,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
+  - jekyll-archives
 
 sass:
     style: compressed
@@ -62,4 +63,8 @@ pagination:
   
   sort_reverse: true
 
-include: ['.test']
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: collection

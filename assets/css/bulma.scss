@@ -41,10 +41,18 @@ article {
     font-family: $family-secondary}
 }
 
-.article-list-date, .article-list-divider, .article-list-minutes {
+.article-list-date, .article-list-divider, .article-list-minutes, .article-list-cat {
     font-family: $family-sans-serif;
     color: $grey-light;
     text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.article-list-item {
+    font-family: $family-sans-serif;
+    color: $grey-light;
+    font-style: italic;
+    text-transform: capitalize;
     font-size: 0.85rem;
 }
 
@@ -55,7 +63,7 @@ article {
 }
 
 .article-list-divider {
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 .article-list-title {
