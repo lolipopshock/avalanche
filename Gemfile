@@ -41,5 +41,7 @@ gem "jekyll-paginate-v2", group: [:jekyll_plugins]
 # archive
 gem "jekyll-archives", group: [:jekyll_plugins]
 
+gem 'jekyll-admin', group: [:jekyll_plugins]
+
 # gem 'pygments.rb'
 # gem 'rouge',  group: [:jekyll_plugins]
