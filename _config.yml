@@ -16,8 +16,8 @@
 title: Avalanche
 description: >
   Avalanche is a research portfolio website template based on Jekyll and bulma.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/avalanche" # the subpath of your site, e.g. /blog
+url: "https://lolipopshock.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
