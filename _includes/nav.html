@@ -16,7 +16,7 @@
         <div class="navbar-end">
             <!-- navbar items -->
             {% for item in site.data.settings.menu %}
-            <a href="/{{ item.file }}" class="navbar-item">{{ item.name }}</a>
+            <a href="{{ item.file | prepend: '/' | relative_url }}" class="navbar-item">{{ item.name }}</a>
             {% endfor %}
             <div class="navbar-item">
                 {% for item in site.data.settings.social %}
