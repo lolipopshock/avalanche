@@ -18,7 +18,7 @@
     {% endif %}
     <span class="field">
         {% for cat in include.post.categories %}
-        <a href="/category/{{ cat | downcase }}" class="article-list-item">
+        <a href="{{ site.url }}{{ site.baseurl }}/category/{{ cat | downcase }}" class="article-list-item">
             {{ cat | capitalize | remove: '<p>' | remove: '</p>' }}
         </a>
         {% if forloop.last != true %}
@@ -32,7 +32,7 @@
     {% endif %}
     <span class="field">
         {% for tag in include.post.tags %}
-        <a href="/tag/{{ tag | downcase }}" class="article-list-item">
+        <a href="{{ site.url }}{{ site.baseurl }}/tag/{{ tag | downcase }}" class="article-list-item">
             {{ tag | capitalize | remove: '<p>' | remove: '</p>' }}
         </a>
         {% if forloop.last != true %}

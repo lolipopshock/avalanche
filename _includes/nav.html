@@ -16,7 +16,7 @@
         <div class="navbar-end">
             <!-- navbar items -->
             {% for item in site.data.settings.menu %}
-            <a href="{{ site.url }}{{ site.baseurl }}/{{ item.file }}" class="navbar-item">{{ item.name }}</a>
+            <a href="{{ item.file | absolute_url }}" class="navbar-item">{{ item.name }}</a>
             {% endfor %}
             <div class="navbar-item">
                 {% for item in site.data.settings.social %}
