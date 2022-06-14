@@ -1,5 +1,6 @@
 # Avalanche Blog Template for Jekyll 
-A highly configurable Jekyll template for academic portfolio website. 
+
+Avalanche is a highly configurable research portfolio website template based [Jekyll](https://jekyllrb.com) and [bulma](https://bulma.io).
 
 ## Installation
 
@@ -12,6 +13,10 @@ A highly configurable Jekyll template for academic portfolio website.
     bundle install
     bundle exec jekyll serve
     ```
+
+## Get started and publish to Github Pages 
+
+- Please check the [tutorial](https://lolipopshock.github.io/avalanche/2021/09/03/Starter.html).
 
 ## Highly configurable templates
 
@@ -76,6 +81,6 @@ We provide a tab in the research page, which helps you group your publications b
         - {name: 'GAN',            id: 'gan',  description: ''}
         - {name: 'Other',          id: 'misc', description: ''}
     ```
-2. For each paper, set their category in the `topic` feature using the corresponding `id` for the category. 
+2. For each paper, set their category in the `topic` feature using the corresponding `id` for the category.
 
 You can also consider group papers based on their `type`s.
