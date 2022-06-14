@@ -1,6 +1,6 @@
 <nav class="navbar" role="navigation">
     <div class="navbar-brand">
-        <a class="navbar-item site-title" href="/">
+        <a class="navbar-item site-title" href="{{ site.url }}{{ site.baseurl }}">
             <strong>{{ site.title }}</strong>
         </a>
 
@@ -16,7 +16,7 @@
         <div class="navbar-end">
             <!-- navbar items -->
             {% for item in site.data.settings.menu %}
-            <a href="{{ item.file | prepend: '/' | relative_url }}" class="navbar-item">{{ item.name }}</a>
+            <a href="{{ site.url }}{{ site.baseurl }}/{{ item.file }}" class="navbar-item">{{ item.name }}</a>
             {% endfor %}
             <div class="navbar-item">
                 {% for item in site.data.settings.social %}
