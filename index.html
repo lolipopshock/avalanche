@@ -5,9 +5,10 @@ layout: page
 <div class="columns">
     <div class="column is-4">
         <div class="content">
-            <figure class="image" style="max-width: 300px; margin-left: 0">
+            <figure class="image pb-0 mb-0" style="max-width: 300px; margin-left: 0">
                 <img src="{{site.url}}{{site.baseurl}}/{{ site.data.meta.index.personal_photo }}">
             </figure>
+            {{ site.data.meta.index.image_credit | markdownify }}
         </div>
     </div>
     <div class="column is-8">
