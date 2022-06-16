@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Avalanche | Publication</title>
+    <meta name="description" content="">
+
+    <meta property="og:title" content="Publication">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lolipopshock.github.io/avalanche/research.html">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://lolipopshock.github.io/avalanche/research.html">
+    <meta name="twitter:title" content="Publication">
+    <meta name="twitter:description" content="">
+
+    <!-- TODO: Adding page thumbnail for social meida -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lolipopshock.github.io/avalanche//research.html">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://lolipopshock.github.io/avalanche/assets/css/bulma.css">
+    <link rel="stylesheet" href="https://lolipopshock.github.io/avalanche/assets/css/syntax/manni.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
+          processEscapes: true,
+        }
+      });
+    </script>
+    
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+    <!-- Add link to h2 ... h6 -->
+    <!-- Ref: https://ben.balter.com/2014/03/13/pages-anchor-links/ -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+      $(function() {
+        return $("h2, h3, h4, h5, h6").each(function(i, el) {
+          var $el, icon, id;
+          $el = $(el);
+          id = $el.attr('id');
+          icon = '<i class="fas fa-link"></i>';
+          if (id) {
+            return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+          }
+        });
+      });
+    </script>
+    
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+</head>
+
+<body>
+
+    <div class="section">            
+        <div class="container">
+            
+                <nav class="navbar" role="navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item site-title" href="https://lolipopshock.github.io/avalanche">
+            <strong>Avalanche</strong>
+        </a>
+
+        <div class="navbar-burger" data-target="navbar-main"
+            onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="navbar-menu" id="navbar-main">
+        <div class="navbar-end">
+            <!-- navbar items -->
+            
+            <a href="https://lolipopshock.github.io/avalanche" class="navbar-item">About</a>
+            
+            <a href="https://lolipopshock.github.io/avalanche/research.html" class="navbar-item">Research</a>
+            
+            <a href="https://lolipopshock.github.io/avalanche/blog.html" class="navbar-item">Blog</a>
+            
+            <div class="navbar-item">
+                
+                <a href="mailto:your@gmail.com" class="button is-white">
+                    <i class="fas fa-at fa-w-14 fa-lg" aria-hidden="true"></i>
+                </a>
+                
+                <a href="https://github.com/youraccount" class="button is-white">
+                    <i class="fab fa-github fa-w-14 fa-lg" aria-hidden="true"></i>
+                </a>
+                
+                <a href="https://twitter.com/youraccount" class="button is-white">
+                    <i class="fab fa-twitter-square fa-w-14 fa-lg" aria-hidden="true"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="is-divider" style="margin-top: 0.5rem; margin-bottom: 3rem;"></div>  
+            
+            <div class="container">
+  <!-- Used for switching between tabs -->
+<style>
+    .tab-pane {
+        display: none
+    }
+    .tab-content .is-active {
+        display: initial
+    }
+</style>
+
+<script>
+    window.onload = () => {
+
+        // Tabs Start
+        document.querySelectorAll('.tabs').forEach((tab) => {
+            tab.querySelectorAll('li').forEach((li) => {
+                li.onclick = () => {
+                    tab.querySelector('li.is-active').classList.remove('is-active')
+                    li.classList.add('is-active')
+                    tab.nextElementSibling.querySelector('.tab-pane.is-active').classList.remove('is-active')
+                    tab.nextElementSibling.querySelector('.tab-pane#' + li.firstElementChild.getAttribute('id'))
+                        .classList.add("is-active")
+                }
+            })
+        })
+
+    }
+</script>
+
+<!-- The tab -->
+<div class="tabs" style="margin-top: -3rem">
+    <ul style="margin: 0rem;">
+        
+        <li class="is-active" >
+            <a id="all">
+                <span>All</span>
+            </a>
+        </li>
+        
+        <li >
+            <a id="dl">
+                <span>Deep Learning</span>
+            </a>
+        </li>
+        
+        <li >
+            <a id="gan">
+                <span>GAN</span>
+            </a>
+        </li>
+        
+        <li >
+            <a id="misc">
+                <span>Other</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+<!-- The tab content -->
+<div class="tab-content">
+    
+    <div class="tab-pane is-active"
+        id="all">
+        
+        
+        <!-- <p class="publication-misc"></p> -->
+        
+        
+        
+        
+        <div class="columns">
+            <div class="column is-4">
+                <figure class="image is-16by9"><img src="https://lolipopshock.github.io/avalanche/assets/publications/placeholder.png"></figure>
+            </div>
+            <div class="column is-8">
+                <div class="content">
+                    <h3 class="publication-title">Deep Learning</h3>
+                    <p class="publication-name">LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey
+</p>
+                    <p class="publication-misc">
+                        
+  
+                        Nature Publishing Group
+ . 
+                    </p>
+                    
+                    <div class="field is-grouped is-grouped-multiline">
+                        
+                        
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <span class="tag"><i class="far fa-file-pdf"></i></span>
+                                <a class="tag" href="https://www.nature.com/articles/nature14539">Paper</a>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <div class="tab-pane "
+        id="dl">
+        
+        
+        <!-- <p class="publication-misc"></p> -->
+        
+        
+        
+        
+        <div class="columns">
+            <div class="column is-4">
+                <figure class="image is-16by9"><img src="https://lolipopshock.github.io/avalanche/assets/publications/placeholder.png"></figure>
+            </div>
+            <div class="column is-8">
+                <div class="content">
+                    <h3 class="publication-title">Deep Learning</h3>
+                    <p class="publication-name">LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey
+</p>
+                    <p class="publication-misc">
+                        
+  
+                        Nature Publishing Group
+ . 
+                    </p>
+                    
+                    <div class="field is-grouped is-grouped-multiline">
+                        
+                        
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <span class="tag"><i class="far fa-file-pdf"></i></span>
+                                <a class="tag" href="https://www.nature.com/articles/nature14539">Paper</a>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <div class="tab-pane "
+        id="gan">
+        
+        
+        <!-- <p class="publication-misc"></p> -->
+        
+        
+    </div>
+    
+    <div class="tab-pane "
+        id="misc">
+        
+        
+        <!-- <p class="publication-misc"></p> -->
+        
+        
+    </div>
+    
+</div>
+</div>
+
+        </div>
+    </div>
+    
+<footer class="footer">
+    <div class="content has-text-centered is-size-7">
+        <p>Created &amp; maintained by <a href="https://www.szj.io">Zejiang Shen</a>, with <a href="https://jekyllrb.com/">jekyll</a> and <a href="http://bulma.io/">bulma</a>. The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.</p>
+
+    </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://lolipopshock.github.io/avalanche/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lolipopshock.github.io/avalanche/" rel="alternate" type="text/html" /><updated>2022-06-16T18:20:37+00:00</updated><id>https://lolipopshock.github.io/avalanche/feed.xml</id><title type="html">Avalanche</title><subtitle>Avalanche is a research portfolio website template based on Jekyll and bulma.
+</subtitle><entry><title type="html">Getting Started</title><link href="https://lolipopshock.github.io/avalanche/2021/09/03/Starter.html" rel="alternate" type="text/html" title="Getting Started" /><published>2021-09-03T00:00:00+00:00</published><updated>2021-09-03T00:00:00+00:00</updated><id>https://lolipopshock.github.io/avalanche/2021/09/03/Starter</id><content type="html" xml:base="https://lolipopshock.github.io/avalanche/2021/09/03/Starter.html">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install Jekyll via their official instructions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/lolipopshock/avalanche/fork&quot;&gt;Fork&lt;/a&gt; the avalanche repository, install dependencies, and start the jekyll server:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git clone https://github.com/&amp;lt;your-github-account&amp;gt;/avalanche.git &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;avalanche
+ bundle &lt;span class=&quot;nb&quot;&gt;install
+ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;create-a-new-blog-post&quot;&gt;Create a new blog post&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create a (markdown) file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_post&lt;/code&gt; folder:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll post &amp;lt;title-to-your-post&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;It will automatically create the file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-&amp;lt;title&amp;gt;.md&lt;/code&gt; format.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Edit the content in &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-&amp;lt;title&amp;gt;.md&lt;/code&gt;, just like what you do in any other markdown files.
+    &lt;ul&gt;
+      &lt;li&gt;The markdown files contains some metadata, which is known as the &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;Front Matter&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Math symbols and equations are also supprted, e.g.,
+        &lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\rho&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\rho&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\frac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\tau&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ij&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\partial&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\rho&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;p&gt;will render&lt;/p&gt;
+
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\partial (\rho u_{i})}{\partial t} + \frac{\partial[\rho u_{i}u_{j}]}{\partial x_{j}} = -\frac{\partial p}{\partial x_{i}} + \frac{\partial \tau_{ij}}{\partial x_{j}} + \rho f_{i}&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;publish-the-website-via-github-pages&quot;&gt;Publish the website via Github Pages&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Test the changes locally and ensure it works properly&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Commit the changes and push them to Github
+    &lt;ul&gt;
+      &lt;li&gt;A github workflow will run and generate website in a separate branch &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; on Github&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Configure the Github page settings:&lt;img src=&quot;/avalanche/assets/posts/gh-publish.png&quot; alt=&quot;Github Page Publish Setting&quot; /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Go to your github repo website &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/&amp;lt;your-github-username&amp;gt;/avalanche&lt;/code&gt;, and open the setting:&lt;/li&gt;
+      &lt;li&gt;Go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Pages&lt;/code&gt; page on the left panel&lt;/li&gt;
+      &lt;li&gt;Change to use &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch to publish the website&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Wait for a while and the site should be ready via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;your-github-username&amp;gt;.github.io/avalanche&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;optional&quot;&gt;Optional&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You can &lt;a href=&quot;https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/renaming-a-repository&quot;&gt;rename your Github repo&lt;/a&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;avalanche&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;your-github-username&amp;gt;.github.io&lt;/code&gt; on Github, and the site will be published at &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;your-github-username&amp;gt;.github.io/&lt;/code&gt; instead.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="tutorial" /><summary type="html">Installation</summary></entry></feed>
